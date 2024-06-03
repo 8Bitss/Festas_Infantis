@@ -1,10 +1,13 @@
 using FestasInfantis.WinApp.Compartilhado;
+using FestasInfantis.WinApp.ModuloCliente;
 
 namespace FestasInfantis.WinApp
 {
     public partial class TelaPrincipalForm : Form
     {
         ControladorBase controlador;
+
+        RepositorioCliente repositorioCliente;
 
         public static TelaPrincipalForm Instancia { get; private set; }
 
@@ -14,11 +17,31 @@ namespace FestasInfantis.WinApp
 
             lblTipoCadastro.Text = string.Empty;
             Instancia = this;
+
+            repositorioCliente = new RepositorioCliente();
+
+            CadastrarRegistrosTeste();
         }
+
 
         public void AtualizarRodape(string texto)
         {
             statusLabelPrincipal.Text = texto;
+        }
+
+        #region Botões do Menu
+        private void clientesMenuItem_Click(object sender, EventArgs e)
+        {
+            controlador = new ControladorCliente(repositorioCliente);
+
+            ConfigurarTelaPrincipal(controlador);
+        }
+        #endregion
+
+
+        private void btnAdicionar_Click(object sender, EventArgs e)
+        {
+            controlador.Adicionar();
         }
 
         private void ConfigurarTelaPrincipal(ControladorBase controladorSelecionado)
@@ -59,5 +82,18 @@ namespace FestasInfantis.WinApp
             pnlRegistros.Controls.Add(listagemContato);
         }
 
+
+        private void CadastrarRegistrosTeste()
+        {
+            List<Cliente> clientes = new List<Cliente>()
+            {
+                new("Gabriel", "049 99191-0909", "123.456.789-10"),
+                new("Pablo", "049 99121-1010", "123.456.789-20"),
+                new("Tiago", "049 91312-2020", "123.456.789-30"),
+            };
+
+            repositorioCliente.CadastrarVarios(clientes);
+
+        }
     }
 }

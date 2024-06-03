@@ -1,3 +1,4 @@
+
 namespace FestasInfantis.WinApp
 {
     internal static class Program

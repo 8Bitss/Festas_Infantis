@@ -1,4 +1,4 @@
-﻿using FestasInfantis.ConsoleApp.Compartilhado;
+﻿using FestasInfantis.WinApp.Compartilhado;
 
 namespace FestasInfantis.WinApp.ModuloCliente
 {
@@ -12,7 +12,7 @@ namespace FestasInfantis.WinApp.ModuloCliente
 
         public Cliente(string nome, string telefone, string cpf)
         {
-            Nome = Nome;
+            Nome = nome;
             Telefone = telefone;
             Cpf = cpf;
         }
