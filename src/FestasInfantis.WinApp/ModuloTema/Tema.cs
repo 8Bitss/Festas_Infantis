@@ -6,7 +6,7 @@ namespace FestasInfantis.WinApp.ModuloTema
     {
         public string Nome { get; set; }
         public string Valor { get; set; }
-     // public string Intens { get; set; }
+     // public string Itens { get; set; }
       //public Aluguel Aluguel { get; set; }
 
         public Tema(string nome, string valor)
