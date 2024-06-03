@@ -32,8 +32,9 @@
             cadastrosToolStripMenuItem = new ToolStripMenuItem();
             clientesMenuItem = new ToolStripMenuItem();
             temasMenuItem = new ToolStripMenuItem();
+            toolStripMenuItem1 = new ToolStripMenuItem();
             itensToolStripMenuItem = new ToolStripMenuItem();
-            alugueisMenuItem = new ToolStripMenuItem();
+            toolStripMenuItem3 = new ToolStripMenuItem();
             statusStrip1 = new StatusStrip();
             statusLabelPrincipal = new ToolStripStatusLabel();
             toolStrip1 = new ToolStrip();
@@ -51,7 +52,6 @@
             toolStripSeparator4 = new ToolStripSeparator();
             lblTipoCadastro = new ToolStripLabel();
             pnlRegistros = new Panel();
-            toolStripMenuItem1 = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
             toolStrip1.SuspendLayout();
@@ -71,7 +71,7 @@
             // 
             // cadastrosToolStripMenuItem
             // 
-            cadastrosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { clientesMenuItem, temasMenuItem, alugueisMenuItem });
+            cadastrosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { clientesMenuItem, temasMenuItem, toolStripMenuItem3 });
             cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             cadastrosToolStripMenuItem.Size = new Size(109, 29);
             cadastrosToolStripMenuItem.Text = "Cadastros";
@@ -89,17 +89,23 @@
             temasMenuItem.Size = new Size(224, 30);
             temasMenuItem.Text = "Temas";
             // 
+            // toolStripMenuItem1
+            // 
+            toolStripMenuItem1.Name = "toolStripMenuItem1";
+            toolStripMenuItem1.Size = new Size(142, 30);
+            toolStripMenuItem1.Text = "Item";
+            // 
             // itensToolStripMenuItem
             // 
             itensToolStripMenuItem.Name = "itensToolStripMenuItem";
             itensToolStripMenuItem.Size = new Size(142, 30);
             itensToolStripMenuItem.Text = "Valor";
             // 
-            // alugueisMenuItem
+            // toolStripMenuItem3
             // 
-            alugueisMenuItem.Name = "alugueisMenuItem";
-            alugueisMenuItem.Size = new Size(224, 30);
-            alugueisMenuItem.Text = "Aluguéis";
+            toolStripMenuItem3.Name = "toolStripMenuItem3";
+            toolStripMenuItem3.Size = new Size(224, 30);
+            toolStripMenuItem3.Text = "Aluguéis";
             // 
             // statusStrip1
             // 
@@ -253,12 +259,6 @@
             pnlRegistros.Size = new Size(914, 493);
             pnlRegistros.TabIndex = 3;
             // 
-            // toolStripMenuItem1
-            // 
-            toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(142, 30);
-            toolStripMenuItem1.Text = "Item";
-            // 
             // TelaPrincipalForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -309,7 +309,7 @@
         private ToolStripMenuItem clientesMenuItem;
         private ToolStripMenuItem temasMenuItem;
         private ToolStripMenuItem itensToolStripMenuItem;
-        private ToolStripMenuItem alugueisMenuItem;
         private ToolStripMenuItem toolStripMenuItem1;
+        private ToolStripMenuItem toolStripMenuItem3;
     }
 }
