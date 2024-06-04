@@ -1,4 +1,4 @@
-﻿namespace eAgenda.WinApp.ModuloTarefa
+﻿namespace FestasInfantis.WinApp.ModuloTema
 {
     partial class TelaCadastroTema
     {
@@ -78,7 +78,6 @@
             btnAdicionar.TabIndex = 11;
             btnAdicionar.Text = "Adicionar";
             btnAdicionar.UseVisualStyleBackColor = true;
-            btnAdicionar.Click += btnAdicionar_Click;
             // 
             // label2
             // 
@@ -104,20 +103,19 @@
             // 
             btnGravar.DialogResult = DialogResult.OK;
             btnGravar.Font = new Font("Segoe UI", 11.25F);
-            btnGravar.Location = new Point(217, 395);
+            btnGravar.Location = new Point(217, 353);
             btnGravar.Margin = new Padding(3, 4, 3, 4);
             btnGravar.Name = "btnGravar";
             btnGravar.Size = new Size(114, 49);
             btnGravar.TabIndex = 15;
             btnGravar.Text = "Gravar";
             btnGravar.UseVisualStyleBackColor = true;
-            btnGravar.Click += btnGravar_Click;
             // 
             // btnCancelar
             // 
             btnCancelar.DialogResult = DialogResult.Cancel;
             btnCancelar.Font = new Font("Segoe UI", 11.25F);
-            btnCancelar.Location = new Point(338, 395);
+            btnCancelar.Location = new Point(338, 353);
             btnCancelar.Margin = new Padding(3, 4, 3, 4);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(114, 49);
@@ -129,7 +127,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(466, 457);
+            ClientSize = new Size(466, 418);
             Controls.Add(btnGravar);
             Controls.Add(btnCancelar);
             Controls.Add(labelTema);

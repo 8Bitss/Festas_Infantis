@@ -1,38 +1,40 @@
-﻿namespace eAgenda.WinApp.ModuloTarefa
+﻿using FestasInfantis.WinApp.ModuloTema; 
+    
+namespace FestasInfantis.WinApp.ModuloTema
 {
     public partial class TelaCadastroTema : Form
     {
-        private Tarefa tarefa;
+        private Tema tema;
 
-        public Tarefa Tarefa
+        public Tema tema;
         {
             get
             {
-                return tarefa;
+                return tema;
             }
             set
             {
-                tarefa = value;
+                tema = value;
             }
         }
 
-        public List<ItemTarefa> ItensAdicionados
+        public List<ItemTema> ItensAdicionados
         {
             get
             {
-                return listItensTema.Items.Cast<ItemTarefa>().ToList();
+                return listItensTema.Items.Cast<ItemTema>().ToList();
             }
         }
 
-        public TelaCadastroTema(Tarefa tarefaSelecionada)
+        public TelaCadastroTema(Tema temaSelecionado)
         {
             InitializeComponent();
 
-            Tarefa = tarefaSelecionada;
+            Tema = temaSelecionado;
 
-            labelTema.Text = tarefaSelecionada.Titulo;
+            labelTema.Text = temaSelecionado.Titulo;
 
-            foreach (ItemTarefa item in tarefaSelecionada.Itens)
+            foreach (ItemTema item in temaSelecionado.Itens)
                 listItensTema.Items.Add(item);
         }
 
@@ -43,9 +45,9 @@
             if (titulos.Contains(txtTituloItem.Text))
                 return;
 
-            ItemTarefa itemTarefa = new ItemTarefa(txtTituloItem.Text);
+            ItemTema itemTema = new ItemTema(txtTituloItem.Text);
 
-            listItensTema.Items.Add(itemTarefa);
+            listItensTema.Items.Add(itemTema);
         }
 
         private void btnGravar_Click(object sender, EventArgs e)
