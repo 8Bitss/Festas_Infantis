@@ -45,7 +45,40 @@ namespace FestasInfantis.WinApp.ModuloCliente
 
         public override void Editar()
         {
-            throw new NotImplementedException();
+            TelaClienteForm telaCliente = new TelaClienteForm();
+
+            int idSelecionado = tabelaCliente.ObterRegistroSelecionado();
+
+            Cliente clienteSelecionado =
+                repositorioCliente.SelecionarPorId(idSelecionado);
+
+            if (clienteSelecionado == null)
+            {
+                MessageBox.Show(
+                    "Não é possível realizar esta ação sem um registro selecionado.",
+                    "Aviso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+
+            telaCliente.Cliente = clienteSelecionado;
+
+            DialogResult resultado = telaCliente.ShowDialog();
+
+            if (resultado != DialogResult.OK)
+                return;
+
+            Cliente clienteEditado = telaCliente.Cliente;
+
+            repositorioCliente.Editar(clienteSelecionado.Id, clienteEditado);
+
+            CarregarClientes();
+
+            TelaPrincipalForm
+                .Instancia
+                .AtualizarRodape($"O registro \"{clienteEditado.Nome}\" foi editado com sucesso!");
         }
 
         public override void Excluir()
