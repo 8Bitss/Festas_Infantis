@@ -33,7 +33,6 @@
             clientesMenuItem = new ToolStripMenuItem();
             temasMenuItem = new ToolStripMenuItem();
             toolStripMenuItem1 = new ToolStripMenuItem();
-            itensToolStripMenuItem = new ToolStripMenuItem();
             toolStripMenuItem3 = new ToolStripMenuItem();
             statusStrip1 = new StatusStrip();
             statusLabelPrincipal = new ToolStripStatusLabel();
@@ -84,22 +83,17 @@
             // 
             // temasMenuItem
             // 
-            temasMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toolStripMenuItem1, itensToolStripMenuItem });
+            temasMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toolStripMenuItem1 });
             temasMenuItem.Name = "temasMenuItem";
             temasMenuItem.Size = new Size(224, 30);
             temasMenuItem.Text = "Temas";
+            temasMenuItem.Click += temasMenuItem_Click;
             // 
             // toolStripMenuItem1
             // 
             toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(142, 30);
+            toolStripMenuItem1.Size = new Size(224, 30);
             toolStripMenuItem1.Text = "Item";
-            // 
-            // itensToolStripMenuItem
-            // 
-            itensToolStripMenuItem.Name = "itensToolStripMenuItem";
-            itensToolStripMenuItem.Size = new Size(142, 30);
-            itensToolStripMenuItem.Text = "Valor";
             // 
             // toolStripMenuItem3
             // 
@@ -145,6 +139,7 @@
             btnAdicionar.Name = "btnAdicionar";
             btnAdicionar.Padding = new Padding(5);
             btnAdicionar.Size = new Size(38, 38);
+            btnAdicionar.Click += btnAdicionar_Click;
             // 
             // btnEditar
             // 
@@ -308,7 +303,6 @@
         private ToolStripSeparator toolStripSeparator4;
         private ToolStripMenuItem clientesMenuItem;
         private ToolStripMenuItem temasMenuItem;
-        private ToolStripMenuItem itensToolStripMenuItem;
         private ToolStripMenuItem toolStripMenuItem1;
         private ToolStripMenuItem toolStripMenuItem3;
     }

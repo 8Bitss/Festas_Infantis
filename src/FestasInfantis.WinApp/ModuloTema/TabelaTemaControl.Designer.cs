@@ -35,10 +35,10 @@
             // DataGridTema
             // 
             DataGridTema.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DataGridTema.Location = new Point(0, 21);
+            DataGridTema.Location = new Point(0, 3);
             DataGridTema.Name = "DataGridTema";
             DataGridTema.RowHeadersWidth = 51;
-            DataGridTema.Size = new Size(287, 170);
+            DataGridTema.Size = new Size(287, 200);
             DataGridTema.TabIndex = 0;
             // 
             // TabelaTemaControl

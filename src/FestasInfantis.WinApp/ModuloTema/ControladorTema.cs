@@ -1,17 +1,20 @@
-﻿using FestasInfantis.ConsoleApp.Compartilhado;
+﻿
 using FestasInfantis.WinApp.Compartilhado;
 
 namespace FestasInfantis.WinApp.ModuloTema
 {
     public class ControladorTema : ControladorBase
     {
-    
+        private RepositorioTema repositorioTema;
+            
+        private TabelaTemaControl tabelaTema;
+
         public ControladorTema(RepositorioTema repositorio)
         {
             repositorioTema = repositorio;
         }
 
-        public override string TipoCadastro { get { return "Nome"; } }
+        public override string TipoCadastro { get { return "Tema"; } }
 
         public override string ToolTipAdicionar { get { return "Cadastrar um novo tema"; } }
 
@@ -22,16 +25,17 @@ namespace FestasInfantis.WinApp.ModuloTema
 
         public override void Adicionar()
         {
-            TelaCadastroTemaForm telaCadastroTema = new TelaCadastroTemaForm();
-          
-            DialogResult resultado = telaCadastroTema.ShowDialog();
+            TelaCadastroTema telaTema = new TelaCadastroTema();
 
+            DialogResult resultado = telaTema.ShowDialog();
+            
             if (resultado != DialogResult.OK)
                 return;
 
-            Tema novoTema = telaCadastroTema.Tema;
+            Tema novoTema = telaTema.Tema;
 
-            repositorioTema.CadastrarTema();
+            repositorioTema.Cadastrar(novoTema);
+
             CarregarTema();
 
             TelaPrincipalForm
@@ -41,9 +45,9 @@ namespace FestasInfantis.WinApp.ModuloTema
 
         public override void Editar()
         {
-            TelaCadastroTema telaCadastroTema = new TelaCadastroTemaForm(); 
-           
-          int idSelecionado = TabelaTemaControl.ObterRegistroSelecionado(); 
+            TelaCadastroTema telaCadastroTema = new TelaCadastroTema (); 
+          
+            int idSelecionado = tabelaTema.ObterRegistroSelecionado();
 
             Tema temaSelecionado =
                 repositorioTema.SelecionarPorId(idSelecionado);
@@ -51,7 +55,7 @@ namespace FestasInfantis.WinApp.ModuloTema
             if (temaSelecionado == null)
             {
                 MessageBox.Show(
-                    "Não é possível realizar esta ação, selecione um registro para proceguir.",
+                    "Não é possível realizar esta ação, selecione registro válido.",
                     "Aviso",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning
@@ -59,18 +63,18 @@ namespace FestasInfantis.WinApp.ModuloTema
                 return;
             }
 
-            telaCadastroTema.tema = temaSelecionado;
+            telaCadastroTema.Tema = temaSelecionado;
 
             DialogResult resultado = telaCadastroTema.ShowDialog();
 
             if (resultado != DialogResult.OK)
                 return;
 
-            Tema temaEditado = telaCadastroTema.tema;
+            Tema temaEditado = telaCadastroTema.Tema;
 
-            repositorioTema.Editar(temaSelecionado.Id, temaEditado);
-
-            CarregarClientes();
+            repositorioTema.Editar(temaSelecionado.Id,temaEditado);
+            
+            CarregarTema();
 
             TelaPrincipalForm
                 .Instancia
@@ -83,11 +87,11 @@ namespace FestasInfantis.WinApp.ModuloTema
 
             Tema temaSelecionado =
                 repositorioTema.SelecionarPorId(idSelecionado);
-
+                
             if (temaSelecionado == null)
             {
                 MessageBox.Show(
-                    "Não é possível realizar esta ação, selecione um registro para proceguir.",
+                    "Não é possível realizar esta ação, selecione registro válido.",
                     "Aviso",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning
@@ -107,28 +111,30 @@ namespace FestasInfantis.WinApp.ModuloTema
 
             repositorioTema.Excluir(temaSelecionado.Id);
 
-            CarregarClientes();
+            CarregarTema();
 
             TelaPrincipalForm
                 .Instancia
                 .AtualizarRodape($"O registro \"{temaSelecionado.Nome}\" foi excluído com sucesso!");
         }
 
-        private void CarregarClientes()
+        private void CarregarTema()
         {
             List<Tema> tema = repositorioTema.SelecionarTodos();
-
-            tabelaTemaControl.AtualizarRegistros(tema);
+            tabelaTema.AtualizarRegistros(tema);
         }
 
         public override UserControl ObterListagem()
         {
-            if (tabelaTemaControl == null)
-                tabelaTemaControl = new TabelaTemaControl();
+            if (tabelaTema == null)
+                tabelaTema = new TabelaTemaControl();
 
             CarregarTema();
 
-            return tabelaTemaControl;
+            return tabelaTema;
         }
     }
 }
+
+
+    

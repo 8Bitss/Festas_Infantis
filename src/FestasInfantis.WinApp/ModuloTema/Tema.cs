@@ -1,4 +1,4 @@
-﻿using FestasInfantis.ConsoleApp.Compartilhado;
+﻿using FestasInfantis.WinApp.Compartilhado;
 
 namespace FestasInfantis.WinApp.ModuloTema
 {
@@ -9,7 +9,7 @@ namespace FestasInfantis.WinApp.ModuloTema
      // public string Itens { get; set; }
       //public Aluguel Aluguel { get; set; }
 
-        public Tema(string nome, string valor)
+        public Tema(string nome, string valor, string itens)
         {
             Nome = Nome;
             Valor = Valor;

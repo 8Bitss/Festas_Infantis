@@ -1,6 +1,6 @@
-﻿namespace FestasInfantis.ConsoleApp.Compartilhado
+﻿namespace FestasInfantis.WinApp.Compartilhado
 {
-    public abstract class RepositorioTema<T> where T : EntidadeBase
+    public abstract class RepositorioBase<T> where T : EntidadeBase
     {
         protected List<T> registros = new List<T>();
 
