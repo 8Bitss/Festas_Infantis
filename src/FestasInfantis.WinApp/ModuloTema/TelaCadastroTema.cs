@@ -25,12 +25,12 @@ namespace FestasInfantis.WinApp.ModuloTema
 
         private void btnGravar_Click(object sender, EventArgs e)
         {
-            string nome = txtNome.Text; 
+            string nome = txtNome.Text;
             string valor = txtValor.Text;
             string itens = txtItens.Text;
             string alugueis = txtAlugueis.Text;
-         
-            tema = new Tema(nome,valor,itens,alugueis); // <---- {verificar aqui}  
+
+            tema = new Tema (nome, valor, itens, alugueis); // <---- {verificar aqui}  
 
             List<string> erros = tema.Validar();
             if (erros.Count > 0)
@@ -40,6 +40,14 @@ namespace FestasInfantis.WinApp.ModuloTema
             }
 
             return;
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            if (DialogResult == DialogResult.Cancel)
+            {
+
+            }
         }
     }
 }

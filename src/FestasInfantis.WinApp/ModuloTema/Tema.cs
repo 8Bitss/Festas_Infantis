@@ -9,7 +9,7 @@ namespace FestasInfantis.WinApp.ModuloTema
      // public string Itens { get; set; }
       //public Aluguel Aluguel { get; set; }
 
-        public Tema(string nome, string valor, string itens)
+        public Tema(string nome, string valor, string itens, string alugueis)
         {
             Nome = Nome;
             Valor = Valor;
