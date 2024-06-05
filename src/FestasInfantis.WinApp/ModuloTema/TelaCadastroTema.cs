@@ -1,4 +1,5 @@
-﻿using FestasInfantis.WinApp.ModuloTema; 
+﻿using FestasInfantis.WinApp.Compartilhado;
+using FestasInfantis.WinApp.ModuloTema;
     
 namespace FestasInfantis.WinApp.ModuloTema
 {
