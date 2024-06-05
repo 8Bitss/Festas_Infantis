@@ -48,7 +48,7 @@
             txtNome.Margin = new Padding(3, 4, 3, 4);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(273, 32);
-            txtNome.TabIndex = 8;
+            txtNome.TabIndex = 0;
             // 
             // label1
             // 
@@ -89,7 +89,7 @@
             btnGravar.Margin = new Padding(3, 4, 3, 4);
             btnGravar.Name = "btnGravar";
             btnGravar.Size = new Size(114, 49);
-            btnGravar.TabIndex = 15;
+            btnGravar.TabIndex = 4;
             btnGravar.Text = "Gravar";
             btnGravar.UseVisualStyleBackColor = true;
             // 
@@ -101,7 +101,7 @@
             btnCancelar.Margin = new Padding(3, 4, 3, 4);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(114, 49);
-            btnCancelar.TabIndex = 14;
+            btnCancelar.TabIndex = 5;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
             btnCancelar.Click += btnCancelar_Click;
@@ -113,7 +113,7 @@
             txtItens.Margin = new Padding(3, 4, 3, 4);
             txtItens.Name = "txtItens";
             txtItens.Size = new Size(273, 32);
-            txtItens.TabIndex = 16;
+            txtItens.TabIndex = 2;
             // 
             // txtValor
             // 
@@ -122,7 +122,7 @@
             txtValor.Margin = new Padding(3, 4, 3, 4);
             txtValor.Name = "txtValor";
             txtValor.Size = new Size(273, 32);
-            txtValor.TabIndex = 18;
+            txtValor.TabIndex = 1;
             // 
             // label3
             // 
@@ -141,7 +141,7 @@
             txtAlugueis.Margin = new Padding(3, 4, 3, 4);
             txtAlugueis.Name = "txtAlugueis";
             txtAlugueis.Size = new Size(251, 32);
-            txtAlugueis.TabIndex = 20;
+            txtAlugueis.TabIndex = 3;
             // 
             // label4
             // 
