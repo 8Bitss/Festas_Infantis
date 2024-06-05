@@ -30,7 +30,7 @@ namespace FestasInfantis.WinApp.ModuloTema
             string itens = txtItens.Text;
             string alugueis = txtAlugueis.Text;
 
-            tema = new Tema (nome, valor, itens, alugueis); // <---- {verificar aqui}  
+            tema = new Tema(nome, valor, itens, alugueis); 
 
             List<string> erros = tema.Validar();
             if (erros.Count > 0)
