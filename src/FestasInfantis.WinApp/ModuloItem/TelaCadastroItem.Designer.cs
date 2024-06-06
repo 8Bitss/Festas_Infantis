@@ -27,7 +27,6 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
         {
             listValores = new ListBox();
             label2 = new Label();
@@ -146,28 +145,18 @@
             txtQuantidades.Name = "txtQuantidades";
             txtQuantidades.Size = new Size(278, 32);
             txtQuantidades.TabIndex = 3;
-            // 
-            // TelaCadastroValor
-            // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(433, 375);
-            Controls.Add(txtQuantidades);
-            Controls.Add(label4);
-            Controls.Add(txtValor);
-            Controls.Add(btnGravar);
-            Controls.Add(btnCancelar);
-            Controls.Add(txtTemaDaFesta);
-            Controls.Add(label3);
-            Controls.Add(txtNome);
-            Controls.Add(label1);
-            Controls.Add(label2);
-            Controls.Add(listValores);
-            Name = "TelaCadastroValor";
-            Text = "Cadastro de Valores";
-            ResumeLayout(false);
-            PerformLayout();
-        }
+private TextBox textBox1;
+        private TextBox textBox2;
+        private TextBox textBox3;
+        private TextBox textBox4;
+        private Label lblId;
+        private Label label2;
+        private Label label1;
+        private Label label3;
+        // 
+        // TelaCadastroValor
+        // 
+    }
 
         #endregion
 

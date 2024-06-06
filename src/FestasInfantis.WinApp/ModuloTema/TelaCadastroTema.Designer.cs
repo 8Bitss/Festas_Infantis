@@ -177,7 +177,7 @@
             ShowIcon = false;
             ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Cadastro do Tema da Festa";
+            Text = "Cadastro Tema da Festa";
             ResumeLayout(false);
             PerformLayout();
         }

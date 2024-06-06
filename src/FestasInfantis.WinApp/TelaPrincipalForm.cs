@@ -1,19 +1,22 @@
 using FestasInfantis.WinApp.Compartilhado;
 using FestasInfantis.WinApp.ModuloTema;
+using FestasInfantis.WinApp.ModuloItem;
 
 namespace FestasInfantis.WinApp
 {
     public partial class TelaPrincipalForm : Form
     {
         ControladorBase controlador;
-        RepositorioItem repositorioTema;
+        RepositorioItem repositorioItem;
+        RepositorioTema repositorioTema;
 
         public static TelaPrincipalForm Instancia { get; private set; }
 
         public TelaPrincipalForm()
         {
             InitializeComponent();
-            repositorioTema = new RepositorioItem();
+            repositorioTema = new RepositorioTema();
+            repositorioItem = new RepositorioItem();
 
             lblTipoCadastro.Text = string.Empty;
             Instancia = this;
@@ -66,12 +69,19 @@ namespace FestasInfantis.WinApp
         {
             controlador = new ControladorTema(repositorioTema);
             ConfigurarTelaPrincipal(controlador);
-
-        //  controlador = new ControladorItem(repositorioItem); <--- para submenu item pela princ.
-        //  ConfigurarTelaPrincipal(controlador);
         }
 
         private void btnAdicionar_Click(object sender, EventArgs e)
+        {
+            controlador.Adicionar();
+        }
+
+        private void toolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controlador.Adicionar();
+        }
+
+        private void toolStripMenuTema_Click(object sender, EventArgs e)
         {
             controlador.Adicionar();
         }

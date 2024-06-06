@@ -32,6 +32,7 @@
             cadastrosToolStripMenuItem = new ToolStripMenuItem();
             clientesMenuItem = new ToolStripMenuItem();
             temasMenuItem = new ToolStripMenuItem();
+            toolStripMenuTema = new ToolStripMenuItem();
             toolStripMenuItem = new ToolStripMenuItem();
             toolStripMenuItem3 = new ToolStripMenuItem();
             statusStrip1 = new StatusStrip();
@@ -51,7 +52,6 @@
             toolStripSeparator4 = new ToolStripSeparator();
             lblTipoCadastro = new ToolStripLabel();
             pnlRegistros = new Panel();
-            toolStripMenuTema = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
             toolStrip1.SuspendLayout();
@@ -90,11 +90,19 @@
             temasMenuItem.Text = "Temas";
             temasMenuItem.Click += temasMenuItem_Click;
             // 
+            // toolStripMenuTema
+            // 
+            toolStripMenuTema.Name = "toolStripMenuTema";
+            toolStripMenuTema.Size = new Size(224, 30);
+            toolStripMenuTema.Text = "Tema";
+            toolStripMenuTema.Click += toolStripMenuTema_Click;
+            // 
             // toolStripMenuItem
             // 
             toolStripMenuItem.Name = "toolStripMenuItem";
             toolStripMenuItem.Size = new Size(224, 30);
             toolStripMenuItem.Text = "Itens";
+            toolStripMenuItem.Click += toolStripMenuItem_Click;
             // 
             // toolStripMenuItem3
             // 
@@ -254,12 +262,6 @@
             pnlRegistros.Name = "pnlRegistros";
             pnlRegistros.Size = new Size(914, 493);
             pnlRegistros.TabIndex = 3;
-            // 
-            // toolStripMenuTema
-            // 
-            toolStripMenuTema.Name = "toolStripMenuTema";
-            toolStripMenuTema.Size = new Size(224, 30);
-            toolStripMenuTema.Text = "Tema";
             // 
             // TelaPrincipalForm
             // 

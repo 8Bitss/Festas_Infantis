@@ -9,7 +9,6 @@ namespace FestasInfantis.WinApp.ModuloItem
         public string Item {  get; set; }
         public string Quantidade { get; set; }
         public string valorUnitario { get; set; }
-    //  public object ValorUnitario { get; private set; }
 
 
         public Item(string nome,string tema, string item, string quantidade, string valorunitario)
@@ -29,7 +28,7 @@ namespace FestasInfantis.WinApp.ModuloItem
             Tema = novoCliente.Tema;
             Item = novoCliente.Item;
             Quantidade = novoCliente.Quantidade;
-            ValorUnitario = novoCliente.ValorUnitario;
+            Valor = novoCliente.Valor;
         }
 
         public override List<string> Validar()
@@ -48,7 +47,7 @@ namespace FestasInfantis.WinApp.ModuloItem
             if (string.IsNullOrEmpty(Quantidade.Trim()))
                 erros.Add("O campo quantidade deve ser preenchido");
 
-            if (string.IsNullOrEmpty(ValorUnitario.Trim()))
+            if (string.IsNullOrEmpty(Valor.Trim()))
                 erros.Add("O campo valor unitário deve ser preenchido");
 
              return erros;
