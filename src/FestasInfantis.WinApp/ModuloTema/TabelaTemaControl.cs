@@ -38,6 +38,11 @@ namespace FestasInfantis.WinApp.ModuloTema
             return DataGridTema.SelecionarId();
         }
 
+        internal void AtualizarRegistros(List<Tema> tema)
+        {
+            throw new NotImplementedException();
+        }
+
         private DataGridViewColumn[] ObterColunas()
         {
             return new DataGridViewColumn[]

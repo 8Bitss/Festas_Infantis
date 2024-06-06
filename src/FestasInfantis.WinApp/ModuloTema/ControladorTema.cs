@@ -5,11 +5,11 @@ namespace FestasInfantis.WinApp.ModuloTema
 {
     public class ControladorTema : ControladorBase
     {
-        private RepositorioItem repositorioTema;
+        private RepositorioTema repositorioTema;
             
         private TabelaTemaControl tabelaTema;
 
-        public ControladorTema(RepositorioItem repositorio)
+        public ControladorTema(RepositorioTema repositorio)
         {
             repositorioTema = repositorio;
         }
@@ -32,7 +32,7 @@ namespace FestasInfantis.WinApp.ModuloTema
             if (resultado != DialogResult.OK)
                 return;
 
-            Item novoTema = telaTema.Tema;
+           Tema novoTema = telaTema.Tema;
 
             repositorioTema.Cadastrar(novoTema);
 
@@ -49,7 +49,7 @@ namespace FestasInfantis.WinApp.ModuloTema
           
             int idSelecionado = tabelaTema.ObterRegistroSelecionado();
 
-            Item temaSelecionado =
+            Tema temaSelecionado =
                 repositorioTema.SelecionarPorId(idSelecionado);
 
             if (temaSelecionado == null)
@@ -70,9 +70,9 @@ namespace FestasInfantis.WinApp.ModuloTema
             if (resultado != DialogResult.OK)
                 return;
 
-            Item temaEditado = telaCadastroTema.Tema;
+            Tema temaEditado = telaCadastroTema.Tema;
 
-            repositorioTema.Editar(temaSelecionado.Id,temaEditado);
+            repositorioTema.Editar(temaSelecionado.Id, temaEditado);
             
             CarregarTema();
 
@@ -85,7 +85,7 @@ namespace FestasInfantis.WinApp.ModuloTema
         {
             int idSelecionado = tabelaTema.ObterRegistroSelecionado();
 
-            Item temaSelecionado =
+            Tema temaSelecionado =
                 repositorioTema.SelecionarPorId(idSelecionado);
                 
             if (temaSelecionado == null)
@@ -120,7 +120,7 @@ namespace FestasInfantis.WinApp.ModuloTema
 
         private void CarregarTema()
         {
-            List<Item> tema = repositorioTema.SelecionarTodos();
+            List<Tema> tema = repositorioTema.SelecionarTodos();
             tabelaTema.AtualizarRegistros(tema);
         }
 
