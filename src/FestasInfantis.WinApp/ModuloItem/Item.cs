@@ -8,16 +8,16 @@ namespace FestasInfantis.WinApp.ModuloItem
         public string Tema { get; set; }
         public string Item {  get; set; }
         public string Quantidade { get; set; }
-        public string valorUnitario { get; set; }
+        public string Valor { get; set; }
 
 
-        public Item(string nome,string tema, string item, string quantidade, string valorunitario)
+        public Item(string nome,string tema, string item, string quantidade, string valor)
         {
             Nome = Nome;
             Tema = Tema;
             Item = Item;
             Quantidade = Quantidade;
-            valorunitario = valorunitario;
+            Valor = Valor;
         }
 
         public override void AtualizarRegistro(EntidadeBase novoRegistro)

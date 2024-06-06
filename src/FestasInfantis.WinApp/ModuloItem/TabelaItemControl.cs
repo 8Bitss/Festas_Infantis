@@ -10,16 +10,18 @@ namespace FestasInfantis.WinApp.ModuloItem
             InitializeComponent();
 
             DataGridItem.Columns.AddRange(ObterColunas());
-            DataGridItem.ConfurarGridSomenteLeitura();
-            DataGridItem.ConfurarGridZebrado();
+            DataGridItem.ConfigurarGridSomenteLeitura();
+            DataGridItem.ConfigurarGridZebrado();
         }
+
+        public object DataGridItem { get; }
 
         public void AtualizarRegistros(List<Item> item)
         {
             DataGridItem.Rows.Clear();
             
             foreach (Item I in item)
-                DataGridItem.Rows.Add(I.Id, I.Tema, I.Nome, I.valorUnitario, I.Quantidade);
+                DataGridItem.Rows.Add(I.Id, I.Tema, I.Nome, I.Valor, I.Quantidade);
         } 
 
         public int ObterRegistroSelecionado()
@@ -27,14 +29,14 @@ namespace FestasInfantis.WinApp.ModuloItem
             return dataGridItem.SelecionarId();
         }
 
-        private DataFormatsColumn[] ObterColunas()
+        private DataGridViewColumn[] ObterColunas()
         {
-            return new DataGridViewColums[]
+            return new DataGridViewColumn[]
             {
                 new DataGridViewTextBoxColumn { DataPropertyName = "Id", HeaderText = "Id" },
                 new DataGridViewTextBoxColumn { DataPropertyName = "Tema", HeaderText = "Tema" },
                 new DataGridViewTextBoxColumn { DataPropertyName = "Nome", HeaderText = "Nome" },
-                new DataGridViewTextBoxColumn { DataPropertyName = "ValorUnitario", HeaderText = "ValorUnitario" },
+                new DataGridViewTextBoxColumn { DataPropertyName = "Valor", HeaderText = "Valor" },
                 new DataGridViewTextBoxColumn { DataPropertyName = "Quantidade", HeaderText = "Quantidade" },
             };
 

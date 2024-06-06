@@ -49,7 +49,7 @@ namespace FestasInfantis.WinApp.ModuloItem
             Item temaSelecionado =
                 repositorioItem.SelecionarPorId(idSelecionado);
 
-            if (ItemSelecionado == null)
+            if (itemSelecionado == null)
             {
                 MessageBox.Show(
                     "Não é possível realizar esta ação, selecione um registro válido.",

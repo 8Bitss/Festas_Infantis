@@ -2,7 +2,7 @@
 
 namespace FestasInfantis.WinApp.ModuloTema
 {
-    public class RepositorioTema : RepositorioBase<Item>
+    public class RepositorioTema : RepositorioBase<Tema>
     {
         internal void Cadastrar(Tema novoTema)
         {
