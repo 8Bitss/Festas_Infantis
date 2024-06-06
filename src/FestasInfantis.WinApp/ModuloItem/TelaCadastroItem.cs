@@ -132,7 +132,7 @@ namespace FestasInfantis.WinApp.ModuloItem
             Controls.Add(textBox1);
             Controls.Add(checkedListBoxItens);
             Name = "TelaCadastroItem";
-            Text = "Tela Cadastro Itens";
+            Text = "Cadastro de Itens";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -141,5 +141,7 @@ namespace FestasInfantis.WinApp.ModuloItem
         private CheckedListBox checkedListBoxItens;
         private TextBox txtId;
         private TextBox txtTotal;
+
+        public Item Item { get; internal set; }
     }
 }
