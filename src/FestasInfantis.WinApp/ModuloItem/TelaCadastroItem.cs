@@ -16,8 +16,8 @@ namespace FestasInfantis.WinApp.ModuloItem
             label2 = new Label();
             label1 = new Label();
             label3 = new Label();
-            this.btnGravarItem = new Button();
-            this.btnCancelarItem = new Button();
+            btnGravarItem = new Button();
+            btnCancelarItem = new Button();
             SuspendLayout();
             // 
             // checkedListBoxItens
@@ -99,29 +99,29 @@ namespace FestasInfantis.WinApp.ModuloItem
             // 
             // btnGravarItem
             // 
-            this.btnGravarItem.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            this.btnGravarItem.Location = new Point(126, 286);
-            this.btnGravarItem.Name = "btnGravarItem";
-            this.btnGravarItem.Size = new Size(94, 29);
-            this.btnGravarItem.TabIndex = 10;
-            this.btnGravarItem.Text = "Gravar";
-            this.btnGravarItem.UseVisualStyleBackColor = true;
+            btnGravarItem.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnGravarItem.Location = new Point(126, 286);
+            btnGravarItem.Name = "btnGravarItem";
+            btnGravarItem.Size = new Size(94, 29);
+            btnGravarItem.TabIndex = 10;
+            btnGravarItem.Text = "Gravar";
+            btnGravarItem.UseVisualStyleBackColor = true;
             // 
             // btnCancelarItem
             // 
-            this.btnCancelarItem.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            this.btnCancelarItem.Location = new Point(229, 288);
-            this.btnCancelarItem.Name = "btnCancelarItem";
-            this.btnCancelarItem.Size = new Size(94, 27);
-            this.btnCancelarItem.TabIndex = 11;
-            this.btnCancelarItem.Text = "Cancelar";
-            this.btnCancelarItem.UseVisualStyleBackColor = true;
+            btnCancelarItem.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCancelarItem.Location = new Point(229, 286);
+            btnCancelarItem.Name = "btnCancelarItem";
+            btnCancelarItem.Size = new Size(94, 29);
+            btnCancelarItem.TabIndex = 11;
+            btnCancelarItem.Text = "Cancelar";
+            btnCancelarItem.UseVisualStyleBackColor = true;
             // 
             // TelaCadastroItem
             // 
             ClientSize = new Size(447, 336);
-            Controls.Add(this.btnCancelarItem);
-            Controls.Add(this.btnGravarItem);
+            Controls.Add(btnCancelarItem);
+            Controls.Add(btnGravarItem);
             Controls.Add(label3);
             Controls.Add(label1);
             Controls.Add(label2);
