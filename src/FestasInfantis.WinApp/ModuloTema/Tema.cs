@@ -2,24 +2,22 @@
 
 namespace FestasInfantis.WinApp.ModuloTema
 {
-    public class Item : EntidadeBase
+    public class Tema : EntidadeBase
     {
         public string Nome { get; set; }
         public string Valor { get; set; }
-     // public string Itens { get; set; }
       //public Aluguel Aluguel { get; set; }
 
-        public Item(string nome, string valor, string itens, string alugueis)
+        public Tema(string nome, string valor, string itens, string alugueis)
         {
             Nome = Nome;
             Valor = Valor;
-            //Itens = Itens;
-            //Aluguel = Aluguel;
+          //Aluguel = Aluguel;
         }
 
         public override void AtualizarRegistro(EntidadeBase novoRegistro)
         {
-            Item novoCliente = (Item) novoRegistro;
+            Tema novoCliente = (Tema) novoRegistro;
 
             Nome = novoCliente.Nome;
             Valor = novoCliente.Valor;
