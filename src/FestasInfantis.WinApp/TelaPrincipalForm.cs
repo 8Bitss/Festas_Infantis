@@ -2,6 +2,7 @@ using FestasInfantis.WinApp.Compartilhado;
 using FestasInfantis.WinApp.ModuloTema;
 using FestasInfantis.WinApp.ModuloItem;
 
+
 namespace FestasInfantis.WinApp
 {
     public partial class TelaPrincipalForm : Form
@@ -69,6 +70,9 @@ namespace FestasInfantis.WinApp
         {
             controlador = new ControladorTema(repositorioTema);
             ConfigurarTelaPrincipal(controlador);
+
+            controlador = new ControladorItem(repositorioItem);
+            ConfigurarTelaPrincipal(controlador);
         }
 
         private void btnAdicionar_Click(object sender, EventArgs e)
@@ -79,11 +83,13 @@ namespace FestasInfantis.WinApp
         private void toolStripMenuItem_Click(object sender, EventArgs e)
         {
             controlador.Adicionar();
+            TelaCadastroItem telaCadastroItem = new TelaCadastroItem();
         }
 
         private void toolStripMenuTema_Click(object sender, EventArgs e)
         {
             controlador.Adicionar();
+            TelaCadastroTema telaCadastroTema = new TelaCadastroTema();
         }
     }
 }
