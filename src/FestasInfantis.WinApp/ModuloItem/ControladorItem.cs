@@ -52,7 +52,7 @@ namespace FestasInfantis.WinApp.ModuloItem
             if (ItemSelecionado == null)
             {
                 MessageBox.Show(
-                    "Não é possível realizar esta ação, selecione registro válido.",
+                    "Não é possível realizar esta ação, selecione um registro válido.",
                     "Aviso",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning
@@ -88,7 +88,7 @@ namespace FestasInfantis.WinApp.ModuloItem
             if (itemSelecionado == null)
             {
                 MessageBox.Show(
-                    "Não é possível realizar esta ação, selecione registro válido.",
+                    "Não é possível realizar esta ação, selecione um registro válido.",
                     "Aviso",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning

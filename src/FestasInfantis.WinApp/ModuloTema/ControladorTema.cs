@@ -55,7 +55,7 @@ namespace FestasInfantis.WinApp.ModuloTema
             if (temaSelecionado == null)
             {
                 MessageBox.Show(
-                    "Não é possível realizar esta ação, selecione registro válido.",
+                    "Não é possível realizar esta ação, selecione um registro válido.",
                     "Aviso",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning
@@ -91,7 +91,7 @@ namespace FestasInfantis.WinApp.ModuloTema
             if (temaSelecionado == null)
             {
                 MessageBox.Show(
-                    "Não é possível realizar esta ação, selecione registro válido.",
+                    "Não é possível realizar esta ação, selecione um registro válido.",
                     "Aviso",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning
