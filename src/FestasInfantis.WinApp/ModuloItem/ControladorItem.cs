@@ -71,7 +71,7 @@ namespace FestasInfantis.WinApp.ModuloItem
 
             repositorioItem.Editar(itemSelecionado.Id, itemEditado);
 
-            CarregarTema();
+            CarregarItem();
 
             TelaPrincipalForm
                 .Instancia
@@ -80,7 +80,7 @@ namespace FestasInfantis.WinApp.ModuloItem
 
         public override void Excluir()
         {
-            int idSelecionado = tabelaIem.ObterRegistroSelecionado();
+            int idSelecionado = tabelaItem.ObterRegistroSelecionado();
 
             Item itemSelecionado =
                 repositorioItem.SelecionarPorId(idSelecionado);
@@ -124,7 +124,7 @@ namespace FestasInfantis.WinApp.ModuloItem
         public override UserControl ObterListagem()
         {
             if (tabelaItem == null)
-                tabelaItem = new TabelaTemaControl();
+                tabelaItem = new TabelaItemControl();
 
             CarregarItem();
 
