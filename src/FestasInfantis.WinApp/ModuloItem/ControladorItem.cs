@@ -5,7 +5,9 @@ namespace FestasInfantis.WinApp.ModuloItem
     public class ControladorItem : ControladorBase
     {
         private RepositorioItem repositorioItem;
+
         private TabelaItemControl tabelaItem;
+
         public ControladorItem(RepositorioItem repositorio)
         {
             repositorioItem = repositorio;
@@ -46,7 +48,7 @@ namespace FestasInfantis.WinApp.ModuloItem
 
             int idSelecionado = tabelaItem.ObterRegistroSelecionado();
 
-            Item temaSelecionado =
+            Item itemSelecionado =
                 repositorioItem.SelecionarPorId(idSelecionado);
 
             if (itemSelecionado == null)
