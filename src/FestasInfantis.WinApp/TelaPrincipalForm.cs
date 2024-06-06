@@ -6,14 +6,14 @@ namespace FestasInfantis.WinApp
     public partial class TelaPrincipalForm : Form
     {
         ControladorBase controlador;
-        RepositorioTema repositorioTema;
+        RepositorioItem repositorioTema;
 
         public static TelaPrincipalForm Instancia { get; private set; }
 
         public TelaPrincipalForm()
         {
             InitializeComponent();
-            repositorioTema = new RepositorioTema();
+            repositorioTema = new RepositorioItem();
 
             lblTipoCadastro.Text = string.Empty;
             Instancia = this;

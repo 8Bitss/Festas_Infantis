@@ -5,11 +5,11 @@ namespace FestasInfantis.WinApp.ModuloTema
 {
     public class ControladorTema : ControladorBase
     {
-        private RepositorioTema repositorioTema;
+        private RepositorioItem repositorioTema;
             
         private TabelaTemaControl tabelaTema;
 
-        public ControladorTema(RepositorioTema repositorio)
+        public ControladorTema(RepositorioItem repositorio)
         {
             repositorioTema = repositorio;
         }
