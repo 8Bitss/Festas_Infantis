@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FestasInfantis.WinApp.ModuloTema
 {
-    public partial class TelaCadastroValor : Form
+    public partial class TelaCadastroItem : Form
     {
-        public TelaCadastroValor()
+        public TelaCadastroItem()
         {
             InitializeComponent();
         }
