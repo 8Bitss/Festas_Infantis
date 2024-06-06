@@ -31,28 +31,29 @@
             listValores = new ListBox();
             label2 = new Label();
             label1 = new Label();
-            btnAdicionar = new Button();
             label3 = new Label();
-            txtTituloItem = new TextBox();
-            textBox1 = new TextBox();
+            txtNome = new TextBox();
+            txtTemaDaFesta = new TextBox();
             btnGravar = new Button();
             btnCancelar = new Button();
-            textBox2 = new TextBox();
+            txtValor = new TextBox();
+            label4 = new Label();
+            txtQuantidades = new TextBox();
             SuspendLayout();
             // 
             // listValores
             // 
             listValores.FormattingEnabled = true;
-            listValores.Location = new Point(12, 126);
+            listValores.Location = new Point(4, 165);
             listValores.Name = "listValores";
-            listValores.Size = new Size(418, 184);
+            listValores.Size = new Size(413, 144);
             listValores.TabIndex = 0;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(12, 9);
+            label2.Location = new Point(4, 7);
             label2.Name = "label2";
             label2.Size = new Size(134, 25);
             label2.TabIndex = 13;
@@ -68,17 +69,6 @@
             label1.TabIndex = 14;
             label1.Text = "Valor:";
             // 
-            // btnAdicionar
-            // 
-            btnAdicionar.Font = new Font("Segoe UI", 11.25F);
-            btnAdicionar.Location = new Point(335, 43);
-            btnAdicionar.Margin = new Padding(3, 4, 3, 4);
-            btnAdicionar.Name = "btnAdicionar";
-            btnAdicionar.Size = new Size(95, 36);
-            btnAdicionar.TabIndex = 17;
-            btnAdicionar.Text = "Adicionar";
-            btnAdicionar.UseVisualStyleBackColor = true;
-            // 
             // label3
             // 
             label3.AutoSize = true;
@@ -89,31 +79,31 @@
             label3.TabIndex = 16;
             label3.Text = "Nome:";
             // 
-            // txtTituloItem
+            // txtNome
             // 
-            txtTituloItem.Font = new Font("Segoe UI", 11.25F);
-            txtTituloItem.Location = new Point(78, 46);
-            txtTituloItem.Margin = new Padding(3, 4, 3, 4);
-            txtTituloItem.Name = "txtTituloItem";
-            txtTituloItem.Size = new Size(254, 32);
-            txtTituloItem.TabIndex = 15;
+            txtNome.Font = new Font("Segoe UI", 11.25F);
+            txtNome.Location = new Point(78, 46);
+            txtNome.Margin = new Padding(3, 4, 3, 4);
+            txtNome.Name = "txtNome";
+            txtNome.Size = new Size(339, 32);
+            txtNome.TabIndex = 1;
             // 
-            // textBox1
+            // txtTemaDaFesta
             // 
-            textBox1.Location = new Point(152, 7);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(278, 27);
-            textBox1.TabIndex = 18;
+            txtTemaDaFesta.Location = new Point(139, 7);
+            txtTemaDaFesta.Name = "txtTemaDaFesta";
+            txtTemaDaFesta.Size = new Size(278, 27);
+            txtTemaDaFesta.TabIndex = 0;
             // 
             // btnGravar
             // 
             btnGravar.DialogResult = DialogResult.OK;
             btnGravar.Font = new Font("Segoe UI", 11.25F);
-            btnGravar.Location = new Point(197, 316);
+            btnGravar.Location = new Point(150, 316);
             btnGravar.Margin = new Padding(3, 4, 3, 4);
             btnGravar.Name = "btnGravar";
             btnGravar.Size = new Size(114, 49);
-            btnGravar.TabIndex = 20;
+            btnGravar.TabIndex = 4;
             btnGravar.Text = "Gravar";
             btnGravar.UseVisualStyleBackColor = true;
             // 
@@ -121,35 +111,55 @@
             // 
             btnCancelar.DialogResult = DialogResult.Cancel;
             btnCancelar.Font = new Font("Segoe UI", 11.25F);
-            btnCancelar.Location = new Point(318, 316);
+            btnCancelar.Location = new Point(271, 316);
             btnCancelar.Margin = new Padding(3, 4, 3, 4);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(114, 49);
-            btnCancelar.TabIndex = 19;
+            btnCancelar.TabIndex = 5;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // txtValor
             // 
-            textBox2.Font = new Font("Segoe UI", 11.25F);
-            textBox2.Location = new Point(78, 86);
-            textBox2.Margin = new Padding(3, 4, 3, 4);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(254, 32);
-            textBox2.TabIndex = 21;
+            txtValor.Font = new Font("Segoe UI", 11.25F);
+            txtValor.Location = new Point(78, 86);
+            txtValor.Margin = new Padding(3, 4, 3, 4);
+            txtValor.Name = "txtValor";
+            txtValor.Size = new Size(339, 32);
+            txtValor.TabIndex = 2;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(12, 129);
+            label4.Name = "label4";
+            label4.Size = new Size(123, 25);
+            label4.TabIndex = 22;
+            label4.Text = "Quantidades:";
+            // 
+            // txtQuantidades
+            // 
+            txtQuantidades.Font = new Font("Segoe UI", 11.25F);
+            txtQuantidades.Location = new Point(139, 126);
+            txtQuantidades.Margin = new Padding(3, 4, 3, 4);
+            txtQuantidades.Name = "txtQuantidades";
+            txtQuantidades.Size = new Size(278, 32);
+            txtQuantidades.TabIndex = 3;
             // 
             // TelaCadastroValor
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(443, 375);
-            Controls.Add(textBox2);
+            ClientSize = new Size(433, 375);
+            Controls.Add(txtQuantidades);
+            Controls.Add(label4);
+            Controls.Add(txtValor);
             Controls.Add(btnGravar);
             Controls.Add(btnCancelar);
-            Controls.Add(textBox1);
-            Controls.Add(btnAdicionar);
+            Controls.Add(txtTemaDaFesta);
             Controls.Add(label3);
-            Controls.Add(txtTituloItem);
+            Controls.Add(txtNome);
             Controls.Add(label1);
             Controls.Add(label2);
             Controls.Add(listValores);
@@ -164,12 +174,13 @@
         private ListBox listValores;
         private Label label2;
         private Label label1;
-        private Button btnAdicionar;
         private Label label3;
-        private TextBox txtTituloItem;
-        private TextBox textBox1;
+        private TextBox txtNome;
+        private TextBox txtTemaDaFesta;
         private Button btnGravar;
         private Button btnCancelar;
-        private TextBox textBox2;
+        private TextBox txtValor;
+        private Label label4;
+        private TextBox txtQuantidades;
     }
 }
