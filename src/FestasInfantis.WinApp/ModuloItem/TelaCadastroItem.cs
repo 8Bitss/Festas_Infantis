@@ -16,6 +16,8 @@ namespace FestasInfantis.WinApp.ModuloItem
             label2 = new Label();
             label1 = new Label();
             label3 = new Label();
+            this.btnGravarItem = new Button();
+            this.btnCancelarItem = new Button();
             SuspendLayout();
             // 
             // checkedListBoxItens
@@ -95,9 +97,31 @@ namespace FestasInfantis.WinApp.ModuloItem
             label3.TabIndex = 9;
             label3.Text = "Valor Total:";
             // 
+            // btnGravarItem
+            // 
+            this.btnGravarItem.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            this.btnGravarItem.Location = new Point(126, 286);
+            this.btnGravarItem.Name = "btnGravarItem";
+            this.btnGravarItem.Size = new Size(94, 29);
+            this.btnGravarItem.TabIndex = 10;
+            this.btnGravarItem.Text = "Gravar";
+            this.btnGravarItem.UseVisualStyleBackColor = true;
+            // 
+            // btnCancelarItem
+            // 
+            this.btnCancelarItem.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            this.btnCancelarItem.Location = new Point(229, 288);
+            this.btnCancelarItem.Name = "btnCancelarItem";
+            this.btnCancelarItem.Size = new Size(94, 27);
+            this.btnCancelarItem.TabIndex = 11;
+            this.btnCancelarItem.Text = "Cancelar";
+            this.btnCancelarItem.UseVisualStyleBackColor = true;
+            // 
             // TelaCadastroItem
             // 
-            ClientSize = new Size(447, 288);
+            ClientSize = new Size(447, 336);
+            Controls.Add(this.btnCancelarItem);
+            Controls.Add(this.btnGravarItem);
             Controls.Add(label3);
             Controls.Add(label1);
             Controls.Add(label2);
