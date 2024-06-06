@@ -32,7 +32,7 @@
             cadastrosToolStripMenuItem = new ToolStripMenuItem();
             clientesMenuItem = new ToolStripMenuItem();
             temasMenuItem = new ToolStripMenuItem();
-            toolStripMenuItem1 = new ToolStripMenuItem();
+            toolStripMenuItem = new ToolStripMenuItem();
             toolStripMenuItem3 = new ToolStripMenuItem();
             statusStrip1 = new StatusStrip();
             statusLabelPrincipal = new ToolStripStatusLabel();
@@ -51,6 +51,7 @@
             toolStripSeparator4 = new ToolStripSeparator();
             lblTipoCadastro = new ToolStripLabel();
             pnlRegistros = new Panel();
+            toolStripMenuTema = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
             toolStrip1.SuspendLayout();
@@ -83,17 +84,17 @@
             // 
             // temasMenuItem
             // 
-            temasMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toolStripMenuItem1 });
+            temasMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toolStripMenuTema, toolStripMenuItem });
             temasMenuItem.Name = "temasMenuItem";
             temasMenuItem.Size = new Size(224, 30);
             temasMenuItem.Text = "Temas";
             temasMenuItem.Click += temasMenuItem_Click;
             // 
-            // toolStripMenuItem1
+            // toolStripMenuItem
             // 
-            toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(224, 30);
-            toolStripMenuItem1.Text = "Item";
+            toolStripMenuItem.Name = "toolStripMenuItem";
+            toolStripMenuItem.Size = new Size(224, 30);
+            toolStripMenuItem.Text = "Itens";
             // 
             // toolStripMenuItem3
             // 
@@ -254,6 +255,12 @@
             pnlRegistros.Size = new Size(914, 493);
             pnlRegistros.TabIndex = 3;
             // 
+            // toolStripMenuTema
+            // 
+            toolStripMenuTema.Name = "toolStripMenuTema";
+            toolStripMenuTema.Size = new Size(224, 30);
+            toolStripMenuTema.Text = "Tema";
+            // 
             // TelaPrincipalForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -303,7 +310,8 @@
         private ToolStripSeparator toolStripSeparator4;
         private ToolStripMenuItem clientesMenuItem;
         private ToolStripMenuItem temasMenuItem;
-        private ToolStripMenuItem toolStripMenuItem1;
+        private ToolStripMenuItem toolStripMenuItem;
         private ToolStripMenuItem toolStripMenuItem3;
+        private ToolStripMenuItem toolStripMenuTema;
     }
 }

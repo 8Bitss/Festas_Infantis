@@ -66,6 +66,9 @@ namespace FestasInfantis.WinApp
         {
             controlador = new ControladorTema(repositorioTema);
             ConfigurarTelaPrincipal(controlador);
+
+        //  controlador = new ControladorItem(repositorioItem); <--- para submenu item pela princ.
+        //  ConfigurarTelaPrincipal(controlador);
         }
 
         private void btnAdicionar_Click(object sender, EventArgs e)
