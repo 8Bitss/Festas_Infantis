@@ -5,8 +5,8 @@ namespace FestasInfantis.WinApp.ModuloTema
 {
     public partial class TelaCadastroTema : Form
     {
-        private Tema tema;
-        public Tema Tema
+        private Item tema;
+        public Item Tema
         {
             get
             {

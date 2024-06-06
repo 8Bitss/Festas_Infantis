@@ -25,11 +25,11 @@ namespace FestasInfantis.WinApp.ModuloTema
             DataGridTema.ConfigurarGridZebrado();
         }
 
-        public void AtualizarRegistros(List<Tema> tema)
+        public void AtualizarRegistros(List<Item> tema)
         {
           DataGridTema.Rows.Clear();
 
-            foreach (Tema T in tema)
+            foreach (Item T in tema)
                 DataGridTema.Rows.Add(T.Id, T.Nome, T.Valor); //T.Aluguel);
         }
 

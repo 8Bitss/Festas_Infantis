@@ -32,7 +32,7 @@ namespace FestasInfantis.WinApp.ModuloTema
             if (resultado != DialogResult.OK)
                 return;
 
-            Tema novoTema = telaTema.Tema;
+            Item novoTema = telaTema.Tema;
 
             repositorioTema.Cadastrar(novoTema);
 
@@ -49,7 +49,7 @@ namespace FestasInfantis.WinApp.ModuloTema
           
             int idSelecionado = tabelaTema.ObterRegistroSelecionado();
 
-            Tema temaSelecionado =
+            Item temaSelecionado =
                 repositorioTema.SelecionarPorId(idSelecionado);
 
             if (temaSelecionado == null)
@@ -70,7 +70,7 @@ namespace FestasInfantis.WinApp.ModuloTema
             if (resultado != DialogResult.OK)
                 return;
 
-            Tema temaEditado = telaCadastroTema.Tema;
+            Item temaEditado = telaCadastroTema.Tema;
 
             repositorioTema.Editar(temaSelecionado.Id,temaEditado);
             
@@ -85,7 +85,7 @@ namespace FestasInfantis.WinApp.ModuloTema
         {
             int idSelecionado = tabelaTema.ObterRegistroSelecionado();
 
-            Tema temaSelecionado =
+            Item temaSelecionado =
                 repositorioTema.SelecionarPorId(idSelecionado);
                 
             if (temaSelecionado == null)
@@ -120,7 +120,7 @@ namespace FestasInfantis.WinApp.ModuloTema
 
         private void CarregarTema()
         {
-            List<Tema> tema = repositorioTema.SelecionarTodos();
+            List<Item> tema = repositorioTema.SelecionarTodos();
             tabelaTema.AtualizarRegistros(tema);
         }
 
