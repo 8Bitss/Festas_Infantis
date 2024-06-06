@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using FestasInfantis.WinApp.Compartilhado;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using FestasInfantis.WinApp.Compartilhado;
+﻿using FestasInfantis.WinApp.Compartilhado;
 
 
 namespace FestasInfantis.WinApp.ModuloTema
@@ -25,22 +15,17 @@ namespace FestasInfantis.WinApp.ModuloTema
             DataGridTema.ConfigurarGridZebrado();
         }
 
-        public void AtualizarRegistros(List<Item> tema)
+        public void AtualizarRegistros(List<Tema> tema)
         {
           DataGridTema.Rows.Clear();
 
-            foreach (Item T in tema)
+            foreach (Tema T in tema)
                 DataGridTema.Rows.Add(T.Id, T.Nome, T.Valor); //T.Aluguel);
         }
 
         public int ObterRegistroSelecionado()
         {
             return DataGridTema.SelecionarId();
-        }
-
-        internal void AtualizarRegistros(List<Tema> tema)
-        {
-            throw new NotImplementedException();
         }
 
         private DataGridViewColumn[] ObterColunas()

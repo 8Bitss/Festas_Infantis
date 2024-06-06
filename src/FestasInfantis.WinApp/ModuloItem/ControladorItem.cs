@@ -1,12 +1,12 @@
 ﻿using FestasInfantis.WinApp.Compartilhado;
-using FestasInfantis.WinApp.ModuloTema;
 
 namespace FestasInfantis.WinApp.ModuloItem
 {
     public class ControladorItem : ControladorBase
     {
         private RepositorioItem repositorioItem;
-        private TabelaItemControl(RepositorioItem repositorio)
+        private TabelaItemControl tabelaItem;
+        public ControladorItem(RepositorioItem repositorio)
         {
             repositorioItem = repositorio;
         }

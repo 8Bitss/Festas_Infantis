@@ -1,5 +1,4 @@
 ﻿using FestasInfantis.WinApp.Compartilhado;
-using System.Drawing;
 
 namespace FestasInfantis.WinApp.ModuloItem
 {
@@ -7,10 +6,11 @@ namespace FestasInfantis.WinApp.ModuloItem
     {
         public string Nome { get; set; }
         public string Tema { get; set; }
-        public string Item { get; set; }
+        public string Item {  get; set; }
         public string Quantidade { get; set; }
         public string valorUnitario { get; set; }
-      //public Aluguel Aluguel { get; set; }
+    //  public object ValorUnitario { get; private set; }
+
 
         public Item(string nome,string tema, string item, string quantidade, string valorunitario)
         {

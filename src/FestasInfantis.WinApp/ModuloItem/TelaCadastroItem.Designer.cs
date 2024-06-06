@@ -1,4 +1,5 @@
-﻿namespace FestasInfantis.WinApp.ModuloTema
+﻿namespace FestasInfantis.WinApp.ModuloItem
+
 {
     partial class TelaCadastroItem
     {
@@ -39,7 +40,6 @@
             txtValor = new TextBox();
             label4 = new Label();
             txtQuantidades = new TextBox();
-            SuspendLayout();
             // 
             // listValores
             // 

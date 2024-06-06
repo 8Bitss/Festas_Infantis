@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using FestasInfantis.WinApp.Compartilhado; 
+
 
 namespace FestasInfantis.WinApp.ModuloItem
 {
@@ -15,6 +8,36 @@ namespace FestasInfantis.WinApp.ModuloItem
         public TabelaItemControl()
         {
             InitializeComponent();
+
+            DataGridItem.Columns.AddRange(ObterColunas());
+            DataGridItem.ConfurarGridSomenteLeitura();
+            DataGridItem.ConfurarGridZebrado();
+        }
+
+        public void AtualizarRegistros(List<Item> item)
+        {
+            DataGridItem.Rows.Clear();
+            
+            foreach (Item I in item)
+                DataGridItem.Rows.Add(I.Id, I.Tema, I.Nome, I.valorUnitario, I.Quantidade);
+        } 
+
+        public int ObterRegistroSelecionado()
+        {
+            return dataGridItem.SelecionarId();
+        }
+
+        private DataFormatsColumn[] ObterColunas()
+        {
+            return new DataGridViewColums[]
+            {
+                new DataGridViewTextBoxColumn { DataPropertyName = "Id", HeaderText = "Id" },
+                new DataGridViewTextBoxColumn { DataPropertyName = "Tema", HeaderText = "Tema" },
+                new DataGridViewTextBoxColumn { DataPropertyName = "Nome", HeaderText = "Nome" },
+                new DataGridViewTextBoxColumn { DataPropertyName = "ValorUnitario", HeaderText = "ValorUnitario" },
+                new DataGridViewTextBoxColumn { DataPropertyName = "Quantidade", HeaderText = "Quantidade" },
+            };
+
         }
     }
 }
