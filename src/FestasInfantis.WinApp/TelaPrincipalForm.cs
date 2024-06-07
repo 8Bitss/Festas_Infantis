@@ -16,11 +16,14 @@ namespace FestasInfantis.WinApp
         public TelaPrincipalForm()
         {
             InitializeComponent();
+            lblTipoCadastro.Text = string.Empty;
+            Instancia = this;
+            
             repositorioTema = new RepositorioTema();
             repositorioItem = new RepositorioItem();
 
-            lblTipoCadastro.Text = string.Empty;
-            Instancia = this;
+            CadastrarRegistrosTeste();
+
         }
 
         public void AtualizarRodape(string texto)
@@ -92,6 +95,28 @@ namespace FestasInfantis.WinApp
         {
             controlador = new ControladorTema(repositorioTema);
             ConfigurarTelaPrincipal(controlador);
+        }
+
+        private void CadastrarRegistrosTeste()
+        {
+            List<Tema> temas = new List<Tema>()
+            {
+                new("Festa Teste", 1800),
+                new("Aniversário Teste", 1200),
+            };
+
+            repositorioTema.CadastrarVarios(temas);
+
+            List<Item> Itens = new List<Item>()
+            {
+                new("Cadeiras", 50),
+                new("Mesas", 100),
+                new("Talheres", 5),
+                new("Copos", 7),
+                new("Guardanapos", 2)
+            };
+
+            repositorioItem.CadastrarVarios(Itens);
         }
     }
 }

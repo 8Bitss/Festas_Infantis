@@ -23,16 +23,6 @@ namespace FestasInfantis.WinApp.ModuloTema
         public TelaCadastroTema()
         {
             InitializeComponent();
-
-        }
-
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            if (DialogResult == DialogResult.Cancel)
-            {
-
-            }
         }
 
         private void btnGravar_Click_1(object sender, EventArgs e)
