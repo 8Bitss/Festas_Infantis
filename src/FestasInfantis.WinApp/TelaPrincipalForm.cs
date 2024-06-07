@@ -66,30 +66,32 @@ namespace FestasInfantis.WinApp
             pnlRegistros.Controls.Add(listagemContato);
         }
 
-        private void temasMenuItem_Click(object sender, EventArgs e)
-        {
-            controlador = new ControladorTema(repositorioTema);
-            ConfigurarTelaPrincipal(controlador);
-
-            controlador = new ControladorItem(repositorioItem);
-            ConfigurarTelaPrincipal(controlador);
-        }
-
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
             controlador.Adicionar();
         }
 
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            controlador.Editar();
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            controlador.Excluir();
+        }
+
         private void toolStripMenuItem_Click(object sender, EventArgs e)
         {
-            controlador.Adicionar();
-            TelaCadastroItem telaCadastroItem = new TelaCadastroItem();
+            controlador = new ControladorItem(repositorioItem);
+
+            ConfigurarTelaPrincipal(controlador);
         }
 
         private void toolStripMenuTema_Click(object sender, EventArgs e)
         {
-            controlador.Adicionar();
-            TelaCadastroTema telaCadastroTema = new TelaCadastroTema();
+            controlador = new ControladorTema(repositorioTema);
+            ConfigurarTelaPrincipal(controlador);
         }
     }
 }

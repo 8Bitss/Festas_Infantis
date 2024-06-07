@@ -10,22 +10,22 @@ namespace FestasInfantis.WinApp.ModuloTema
         {
             InitializeComponent();
 
-            DataGridTema.Columns.AddRange(ObterColunas());
-            DataGridTema.ConfigurarGridSomenteLeitura();
-            DataGridTema.ConfigurarGridZebrado();
+            grid.Columns.AddRange(ObterColunas());
+            grid.ConfigurarGridSomenteLeitura();
+            grid.ConfigurarGridZebrado();
         }
 
         public void AtualizarRegistros(List<Tema> tema)
         {
-          DataGridTema.Rows.Clear();
+          grid.Rows.Clear();
 
             foreach (Tema T in tema)
-                DataGridTema.Rows.Add(T.Id, T.Nome, T.Valor); //T.Aluguel);
+                grid.Rows.Add(T.Id, T.Nome, T.ValorTotal); //T.Aluguel);
         }
 
         public int ObterRegistroSelecionado()
         {
-            return DataGridTema.SelecionarId();
+            return grid.SelecionarId();
         }
 
         private DataGridViewColumn[] ObterColunas()

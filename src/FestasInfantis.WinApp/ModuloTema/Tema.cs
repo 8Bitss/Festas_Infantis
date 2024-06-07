@@ -5,13 +5,13 @@ namespace FestasInfantis.WinApp.ModuloTema
     public class Tema : EntidadeBase
     {
         public string Nome { get; set; }
-        public string Valor { get; set; }
+        public decimal ValorTotal { get; set; }
       //public Aluguel Aluguel { get; set; }
 
-        public Tema(string nome, string valor, string itens, string alugueis)
+        public Tema(string nome, decimal valorTotal)
         {
-            Nome = Nome;
-            Valor = Valor;
+            Nome = nome;
+            ValorTotal = valorTotal;
           //Aluguel = Aluguel;
         }
 
@@ -20,7 +20,6 @@ namespace FestasInfantis.WinApp.ModuloTema
             Tema novoCliente = (Tema) novoRegistro;
 
             Nome = novoCliente.Nome;
-            Valor = novoCliente.Valor;
             //Itens = novoCliente.Itens;
             //Aluguel = novoCliente.Aluguel;
         }
@@ -32,7 +31,7 @@ namespace FestasInfantis.WinApp.ModuloTema
             if (string.IsNullOrEmpty(Nome.Trim()))
                 erros.Add("O campo nome deve ser preenchido");
             
-            if (string.IsNullOrEmpty(Valor.Trim()))
+            if (ValorTotal == null)
                 erros.Add("O campo do valor deve ser preenchido");
 
             //if (string.IsNullOrEmpty(Itens.Trim()))

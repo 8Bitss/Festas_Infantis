@@ -39,7 +39,7 @@ namespace FestasInfantis.WinApp.ModuloItem
 
             TelaPrincipalForm
                 .Instancia
-                .AtualizarRodape($"O registro \"{novoItem.Nome}\" foi criado com sucesso!");
+                .AtualizarRodape($"O registro \"{novoItem.Descricao}\" foi criado com sucesso!");
         }
 
         public override void Editar()
@@ -77,7 +77,7 @@ namespace FestasInfantis.WinApp.ModuloItem
 
             TelaPrincipalForm
                 .Instancia
-                .AtualizarRodape($"O registro \"{itemEditado.Nome}\" foi editado com sucesso!");
+                .AtualizarRodape($"O registro \"{itemEditado.Descricao}\" foi editado com sucesso!");
         }
 
         public override void Excluir()
@@ -99,7 +99,7 @@ namespace FestasInfantis.WinApp.ModuloItem
             }
 
             DialogResult resposta = MessageBox.Show(
-                $"Você deseja realmente excluir o registro \"{itemSelecionado.Nome}\"?",
+                $"Você deseja realmente excluir o registro \"{itemSelecionado.Descricao}\"?",
                 "Confirmar Exclusão",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Warning
@@ -114,7 +114,7 @@ namespace FestasInfantis.WinApp.ModuloItem
 
             TelaPrincipalForm
                 .Instancia
-                .AtualizarRodape($"O registro \"{itemSelecionado.Nome}\" foi excluído com sucesso!");
+                .AtualizarRodape($"O registro \"{itemSelecionado.Descricao}\" foi excluído com sucesso!");
         }
 
         private void CarregarItem()

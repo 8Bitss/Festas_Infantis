@@ -28,32 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridTema = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)DataGridTema).BeginInit();
+            grid = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)grid).BeginInit();
             SuspendLayout();
             // 
-            // DataGridTema
+            // grid
             // 
-            DataGridTema.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DataGridTema.Location = new Point(0, 3);
-            DataGridTema.Name = "DataGridTema";
-            DataGridTema.RowHeadersWidth = 51;
-            DataGridTema.Size = new Size(287, 200);
-            DataGridTema.TabIndex = 0;
+            grid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            grid.Dock = DockStyle.Fill;
+            grid.Location = new Point(0, 0);
+            grid.Name = "grid";
+            grid.Size = new Size(517, 294);
+            grid.TabIndex = 0;
             // 
             // TabelaTemaControl
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(DataGridTema);
+            Controls.Add(grid);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "TabelaTemaControl";
-            Size = new Size(287, 206);
-            ((System.ComponentModel.ISupportInitialize)DataGridTema).EndInit();
+            Size = new Size(517, 294);
+            ((System.ComponentModel.ISupportInitialize)grid).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private DataGridView DataGridTema;
+        private DataGridView grid;
     }
 }
