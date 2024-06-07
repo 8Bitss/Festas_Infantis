@@ -1,4 +1,5 @@
 using FestasInfantis.WinApp.Compartilhado;
+using FestasInfantis.WinApp.ModuloAluguel;
 using FestasInfantis.WinApp.ModuloCliente;
 
 namespace FestasInfantis.WinApp
@@ -8,6 +9,7 @@ namespace FestasInfantis.WinApp
         ControladorBase controlador;
 
         RepositorioCliente repositorioCliente;
+        RepositorioAluguel repositorioAluguel;
 
         public static TelaPrincipalForm Instancia { get; private set; }
 
@@ -19,6 +21,7 @@ namespace FestasInfantis.WinApp
             Instancia = this;
 
             repositorioCliente = new RepositorioCliente();
+            repositorioAluguel = new RepositorioAluguel();
 
             CadastrarRegistrosTeste();
         }
@@ -35,6 +38,19 @@ namespace FestasInfantis.WinApp
             controlador = new ControladorCliente(repositorioCliente);
 
             ConfigurarTelaPrincipal(controlador);
+        }
+
+        private void alugueisMenuItem_Click(object sender, EventArgs e)
+        {
+            controlador = new ControladorAluguel(repositorioAluguel);
+
+            ConfigurarTelaPrincipal(controlador);
+        }
+
+
+        private void itensToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
         #endregion
 

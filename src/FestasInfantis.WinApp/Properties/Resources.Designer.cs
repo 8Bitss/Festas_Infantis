@@ -83,6 +83,26 @@ namespace FestasInfantis.WinApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btnCalcular {
+            get {
+                object obj = ResourceManager.GetObject("btnCalcular", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnCalcular1 {
+            get {
+                object obj = ResourceManager.GetObject("btnCalcular1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btnConcluirAluguel {
             get {
                 object obj = ResourceManager.GetObject("btnConcluirAluguel", resourceCulture);

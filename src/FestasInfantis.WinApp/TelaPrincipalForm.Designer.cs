@@ -76,7 +76,7 @@
             // clientesMenuItem
             // 
             clientesMenuItem.Name = "clientesMenuItem";
-            clientesMenuItem.Size = new Size(135, 24);
+            clientesMenuItem.Size = new Size(180, 24);
             clientesMenuItem.Text = "Clientes";
             clientesMenuItem.Click += clientesMenuItem_Click;
             // 
@@ -84,20 +84,22 @@
             // 
             temasMenuItem.DropDownItems.AddRange(new ToolStripItem[] { itensToolStripMenuItem });
             temasMenuItem.Name = "temasMenuItem";
-            temasMenuItem.Size = new Size(135, 24);
+            temasMenuItem.Size = new Size(180, 24);
             temasMenuItem.Text = "Temas";
             // 
             // itensToolStripMenuItem
             // 
             itensToolStripMenuItem.Name = "itensToolStripMenuItem";
-            itensToolStripMenuItem.Size = new Size(109, 24);
+            itensToolStripMenuItem.Size = new Size(180, 24);
             itensToolStripMenuItem.Text = "Itens";
+            itensToolStripMenuItem.Click += itensToolStripMenuItem_Click;
             // 
             // alugueisMenuItem
             // 
             alugueisMenuItem.Name = "alugueisMenuItem";
-            alugueisMenuItem.Size = new Size(135, 24);
+            alugueisMenuItem.Size = new Size(180, 24);
             alugueisMenuItem.Text = "Aluguéis";
+            alugueisMenuItem.Click += alugueisMenuItem_Click;
             // 
             // statusStrip1
             // 
